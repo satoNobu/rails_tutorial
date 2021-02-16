@@ -12,3 +12,7 @@ services:
     environment:
       POSTGRES_HOST_AUTH_METHOD: 'trust'
       # POSTGRES_PASSWORD: 'postgres' ← envファイルに外出ししても良い
+
+
+# サービス起動
+docker-compose up
