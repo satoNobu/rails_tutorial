@@ -23,7 +23,7 @@ class PasswordResetsController < ApplicationController
   end
 
   def update
-    if params[:user][:password].empty?                  # (3) への対応
+    if params[:user][:password].empty?                  # (3) への対応。パスワードは空許可されているので、保存処理が走る前にここで止める
       @user.errors.add(:password, :blank)
       render 'edit'
     elsif @user.update_attributes(user_params)          # (4) への対応
